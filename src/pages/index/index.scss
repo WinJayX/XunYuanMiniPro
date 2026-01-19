@@ -1,0 +1,281 @@
+// Home page styles
+.index-page {
+    min-height: 100vh;
+    background: #1a1a2e;
+    padding-bottom: 120px; // TabBar safe area
+}
+
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    .loading-spinner {
+        width: 60px;
+        height: 60px;
+        border: 4px solid rgba(201, 160, 80, 0.2);
+        border-top-color: #c9a050;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    }
+
+    .loading-text {
+        margin-top: 24px;
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 28px;
+    }
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    background: linear-gradient(180deg, #1a1a2e 0%, transparent 100%);
+
+    .header-content {
+        .header-title {
+            font-size: 44px;
+            font-weight: 700;
+            color: #c9a050;
+            display: block;
+        }
+
+        .family-count {
+            font-size: 24px;
+            color: rgba(255, 255, 255, 0.5);
+            margin-top: 8px;
+        }
+    }
+
+    .add-btn {
+        width: 80px;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #c9a050, #a88a40);
+        border: none;
+        border-radius: 50%;
+        box-shadow: 0 8px 24px rgba(201, 160, 80, 0.3);
+
+        .add-icon {
+            font-size: 48px;
+            color: #1a1a2e;
+            font-weight: 300;
+            line-height: 1;
+        }
+
+        &:active {
+            transform: scale(0.95);
+        }
+    }
+}
+
+.family-list {
+    height: calc(100vh - 200px);
+    padding: 0 32px;
+}
+
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 120px 40px;
+
+    .empty-icon {
+        font-size: 120px;
+        margin-bottom: 32px;
+    }
+
+    .empty-title {
+        font-size: 36px;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.8);
+        margin-bottom: 16px;
+    }
+
+    .empty-desc {
+        font-size: 26px;
+        color: rgba(255, 255, 255, 0.4);
+        text-align: center;
+    }
+}
+
+.family-card {
+    background: linear-gradient(135deg, rgba(22, 33, 62, 0.8), rgba(15, 52, 96, 0.6));
+    border: 1px solid rgba(201, 160, 80, 0.2);
+    border-radius: 24px;
+    margin-bottom: 24px;
+    overflow: hidden;
+    transition: all 0.2s;
+
+    &:active {
+        transform: scale(0.98);
+        border-color: rgba(201, 160, 80, 0.4);
+    }
+
+    .card-content {
+        padding: 32px;
+    }
+
+    .card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 16px;
+
+        .family-name {
+            font-size: 36px;
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        .theme-badge {
+            padding: 8px 16px;
+            border-radius: 20px;
+            background: rgba(201, 160, 80, 0.2);
+
+            .theme-text {
+                font-size: 20px;
+                color: #c9a050;
+                text-transform: capitalize;
+            }
+        }
+    }
+
+    .family-subtitle {
+        font-size: 26px;
+        color: rgba(255, 255, 255, 0.6);
+        margin-bottom: 16px;
+    }
+
+    .family-info {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+
+        .info-icon {
+            font-size: 24px;
+            margin-right: 8px;
+        }
+
+        .info-text {
+            font-size: 24px;
+            color: rgba(255, 255, 255, 0.5);
+        }
+    }
+
+    .card-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 20px;
+        border-top: 1px solid rgba(201, 160, 80, 0.1);
+
+        .update-time {
+            font-size: 22px;
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        .arrow {
+            font-size: 36px;
+            color: rgba(201, 160, 80, 0.6);
+        }
+    }
+}
+
+// Modal styles
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    width: 600px;
+    background: #16213e;
+    border: 1px solid rgba(201, 160, 80, 0.3);
+    border-radius: 24px;
+    padding: 40px;
+
+    .modal-title {
+        font-size: 36px;
+        font-weight: 600;
+        color: #c9a050;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .modal-form {
+        margin-bottom: 40px;
+
+        .form-group {
+            margin-bottom: 28px;
+
+            .form-label {
+                display: block;
+                font-size: 26px;
+                color: rgba(255, 255, 255, 0.7);
+                margin-bottom: 12px;
+            }
+
+            .form-input {
+                width: 100%;
+                padding: 24px;
+                background: rgba(255, 255, 255, 0.05);
+                border: 1px solid rgba(201, 160, 80, 0.2);
+                border-radius: 12px;
+                color: #ffffff;
+                font-size: 28px;
+
+                &::placeholder {
+                    color: rgba(255, 255, 255, 0.3);
+                }
+            }
+        }
+    }
+
+    .modal-actions {
+        display: flex;
+        gap: 24px;
+
+        .modal-btn {
+            flex: 1;
+            padding: 28px;
+            border-radius: 16px;
+            font-size: 28px;
+            font-weight: 500;
+            border: none;
+
+            &.cancel {
+                background: rgba(255, 255, 255, 0.1);
+                color: rgba(255, 255, 255, 0.7);
+            }
+
+            &.confirm {
+                background: linear-gradient(135deg, #c9a050, #a88a40);
+                color: #1a1a2e;
+            }
+
+            &:active {
+                opacity: 0.8;
+            }
+        }
+    }
+}
