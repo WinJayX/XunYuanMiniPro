@@ -2,7 +2,7 @@
   "name": "XunYuanMiniPro",
   "version": "1.0.0",
   "private": true,
-  "description": "寻源家谱微信小程序",
+  "description": "寻源族谱微信小程序",
   "templateInfo": {
     "name": "default",
     "typescript": true,

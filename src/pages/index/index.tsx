@@ -136,7 +136,7 @@ export default function IndexPage() {
           <View className="empty-state">
             <Text className="empty-icon">📖</Text>
             <Text className="empty-title">还没有家族</Text>
-            <Text className="empty-desc">点击右上角 + 创建您的第一个家谱</Text>
+            <Text className="empty-desc">点击右上角 + 创建您的第一个族谱</Text>
           </View>
         ) : (
           families.map((family) => (

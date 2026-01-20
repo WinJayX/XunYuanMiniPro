@@ -5,10 +5,10 @@ import './app.scss';
 
 function App({ children }: PropsWithChildren) {
   useLaunch(() => {
-    console.log('App launched - 寻源家谱小程序');
+    console.log('App launched - 寻源族谱小程序');
   });
 
-  return <AuthProvider>{ children } </AuthProvider>;
+  return <AuthProvider>{children} </AuthProvider>;
 }
 
 export default App;

@@ -1,5 +1,5 @@
 /**
- * Family Detail Page - 家谱详情页
+ * Family Detail Page - 族谱详情页
  * Features: Couple grouping, sorted members, canvas connection lines
  */
 import { useState, useCallback, useEffect, useMemo, useRef } from 'react';
@@ -107,7 +107,7 @@ export default function FamilyPage() {
         try {
             const data = await familiesApi.getOne(familyId);
             setFamilyData(data);
-            Taro.setNavigationBarTitle({ title: data.settings?.familyName || '家谱详情' });
+            Taro.setNavigationBarTitle({ title: data.settings?.familyName || '族谱详情' });
         } catch (error: any) {
             console.error('Failed to load family:', error);
             Taro.showToast({ title: '加载失败', icon: 'none' });

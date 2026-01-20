@@ -65,7 +65,7 @@ XunYuanMiniPro/
 │   ├── pages/               # 页面
 │   │   ├── index/           # 首页/家族列表
 │   │   ├── login/           # 登录页
-│   │   ├── family/          # 家谱详情页
+│   │   ├── family/          # 族谱详情页
 │   │   └── mine/            # 个人中心
 │   ├── types/               # TypeScript 类型定义
 │   │   └── family.ts
@@ -167,7 +167,7 @@ Taro.navigateTo({ url: '/pages/family/index?id=123' });
 |------|------|------|
 | 首页 | `pages/index/index` | 家族列表展示 |
 | 登录 | `pages/login/index` | 登录/注册 |
-| 家谱详情 | `pages/family/index` | 家谱树展示 |
+| 族谱详情 | `pages/family/index` | 族谱树展示 |
 | 个人中心 | `pages/mine/index` | 用户信息、设置 |
 
 ---

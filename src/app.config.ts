@@ -8,7 +8,7 @@ export default defineAppConfig({
   window: {
     backgroundTextStyle: 'light',
     navigationBarBackgroundColor: '#1a1a2e',
-    navigationBarTitleText: '寻源家谱',
+    navigationBarTitleText: '寻源族谱',
     navigationBarTextStyle: 'white',
   },
   tabBar: {

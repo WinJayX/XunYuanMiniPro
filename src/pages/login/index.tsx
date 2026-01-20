@@ -102,7 +102,7 @@ export default function LoginPage() {
         <View className="login-page">
             {/* Logo */}
             <View className="login-header">
-                <Text className="logo-text">寻源家谱</Text>
+                <Text className="logo-text">寻源族谱</Text>
                 <Text className="logo-subtitle">传承家族记忆，延续血脉亲情</Text>
             </View>
 
